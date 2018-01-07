@@ -1,0 +1,873 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkIconFactory" id="iconfactory1">
+    <sources>
+      <source stock-id="generated-icon-paste-png" filename="icon/paste.png"/>
+      <source stock-id="generated-icon-cut-png" filename="icon/cut.png"/>
+      <source stock-id="generated-icon-redo-png" filename="icon/redo.png"/>
+      <source stock-id="generated-icon-copy-png" filename="icon/copy.png"/>
+      <source stock-id="generated-icon-open-png" filename="icon/open.png"/>
+      <source stock-id="generated-icon-undo-png" filename="icon/undo.png"/>
+      <source stock-id="generated-icon-tabremove-png" filename="icon/removetab.png"/>
+      <source stock-id="generated-icon-filesave-png" filename="icon/filesave.png"/>
+      <source stock-id="generated-icon-new-png" filename="icon/new.png"/>
+      <source stock-id="generated-icon-delete-png" filename="icon/delete.png"/>
+      <source stock-id="generated-icon-find-png" filename="icon/find.png"/>
+    </sources>
+  </object>
+  <object class="GtkWindow" id="window1">
+    <property name="width_request">1000</property>
+    <property name="height_request">600</property>
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">Php-Editor In Php-Gtk2</property>
+    <property name="window_position">center</property>
+    <accel-groups>
+      <group name="accelgroup1"/>
+    </accel-groups>
+    <signal name="destroy" handler="Gtk::main_quit"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkMenuItem" id="menuitem1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem1">
+                        <property name="label">gtk-new</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="file_new"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem2">
+                        <property name="label">gtk-open</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="file_open"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem3">
+                        <property name="label">gtk-save</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="file_save"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem4">
+                        <property name="label">gtk-save-as</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="file_save"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem5">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="on_quit"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Edit</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem6">
+                        <property name="label">gtk-cut</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="cut"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem7">
+                        <property name="label">gtk-copy</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="copyy"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem8">
+                        <property name="label">gtk-paste</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="paste"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem9">
+                        <property name="label">gtk-delete</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <accelerator key="Delete" signal="activate"/>
+                        <signal name="activate" handler="deletee"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem4">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem11">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Find...</property>
+                        <property name="use_underline">True</property>
+                        <accelerator key="F" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                        <signal name="activate" handler="find"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem12">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Find Next</property>
+                        <property name="use_underline">True</property>
+                        <accelerator key="F3" signal="activate"/>
+                        <signal name="activate" handler="find_next"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem3">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem6">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Select _All</property>
+                        <property name="use_underline">True</property>
+                        <accelerator key="A" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                        <signal name="activate" handler="select_all"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem9">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Time/Date</property>
+                        <property name="use_underline">True</property>
+                        <accelerator key="F5" signal="activate"/>
+                        <signal name="activate" handler="time_date"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem5">
+                <property name="visible">True</property>
+                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                <property name="label" translatable="yes">_Format</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu4">
+                    <property name="visible">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <child>
+                      <object class="GtkMenuItem" id="menuitem7">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="label" translatable="yes">Font...</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="font"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem4">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu3">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem10">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="extension_events">cursor</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <property name="accel_group">accelgroup1</property>
+                        <signal name="activate" handler="on_menu_info"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToolbar" id="toolbar1">
+            <property name="visible">True</property>
+            <property name="toolbar_style">icons</property>
+            <property name="icon_size">5</property>
+            <property name="icon_size_set">True</property>
+            <child>
+              <object class="GtkToolButton" id="open">
+                <property name="visible">True</property>
+                <property name="app_paintable">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">open</property>
+                <property name="visible_vertical">False</property>
+                <property name="is_important">True</property>
+                <property name="label" translatable="yes">open</property>
+                <property name="stock_id">generated-icon-open-png</property>
+                <signal name="clicked" handler="file_open"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="new">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">new</property>
+                <property name="visible_vertical">False</property>
+                <property name="label" translatable="yes">new</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-new-png</property>
+                <signal name="clicked" handler="file_new"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="save">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">save</property>
+                <property name="label" translatable="yes">save</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-filesave-png</property>
+                <signal name="clicked" handler="file_save"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="removetab">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">remove tab</property>
+                <property name="visible_vertical">False</property>
+                <property name="label" translatable="yes">removetab</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-tabremove-png</property>
+                <signal name="clicked" handler="tab_remove"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="sep1">
+                <property name="visible">True</property>
+                <property name="visible_vertical">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="undo">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">undo</property>
+                <property name="label" translatable="yes">undo</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-undo-png</property>
+                <signal name="clicked" handler="undo"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="redo">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">redo</property>
+                <property name="label" translatable="yes">redo</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-redo-png</property>
+                <signal name="clicked" handler="redo"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton1">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="cut">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">cut</property>
+                <property name="visible_vertical">False</property>
+                <property name="label" translatable="yes">cut</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-cut-png</property>
+                <signal name="clicked" handler="cut"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="copy">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">copy</property>
+                <property name="visible_vertical">False</property>
+                <property name="label" translatable="yes">copy</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-copy-png</property>
+                <signal name="clicked" handler="copyy"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="paste">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">paste</property>
+                <property name="label" translatable="yes">paste</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-paste-png</property>
+                <signal name="clicked" handler="paste"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="delete">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">delete</property>
+                <property name="label" translatable="yes">delete</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-delete-png</property>
+                <signal name="clicked" handler="deletee"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton2">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="find2">
+                <property name="visible">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_markup">find</property>
+                <property name="label" translatable="yes">find</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">generated-icon-find-png</property>
+                <signal name="clicked" handler="find"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkNotebook" id="notebook1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="scrollable">True</property>
+            <property name="tab_border">1</property>
+            <signal name="switch_page" handler="change_page" after="yes"/>
+            <child>
+              <object class="GtkAlignment" id="alignment1">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">*</property>
+              </object>
+              <packing>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment2">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow2">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label2">
+                <property name="label" translatable="yes">page 2</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment3">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow3">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label3">
+                <property name="label" translatable="yes">page 3</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment4">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow4">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label4">
+                <property name="label" translatable="yes">page 4</property>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment5">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow5">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label5">
+                <property name="label" translatable="yes">page 5</property>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment6">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow6">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label6">
+                <property name="label" translatable="yes">page 6</property>
+              </object>
+              <packing>
+                <property name="position">5</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment7">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow7">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">6</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label7">
+                <property name="label" translatable="yes">page 7</property>
+              </object>
+              <packing>
+                <property name="position">6</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment8">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow8">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">7</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label8">
+                <property name="label" translatable="yes">page 8</property>
+              </object>
+              <packing>
+                <property name="position">7</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment9">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow9">
+                    <property name="can_focus">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="hscrollbar_policy">automatic</property>
+                    <property name="vscrollbar_policy">automatic</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">8</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label9">
+                <property name="label" translatable="yes">page 9</property>
+              </object>
+              <packing>
+                <property name="position">8</property>
+                <property name="tab_fill">False</property>
+                <property name="reorderable">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="find_dialog">
+    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Find</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="type_hint">dialog</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="height_request">10</property>
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox2">
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+            <child>
+              <object class="GtkLabel" id="find">
+                <property name="visible">True</property>
+                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                <property name="label" translatable="yes">Find what: </property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="search_entry">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                <signal name="activate" handler="on_search_entry_activate"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="hbox3">
+                <property name="width_request">6</property>
+                <property name="visible">True</property>
+                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="search_button">
+                <property name="label" translatable="yes">_Find Next</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_search_button_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox4">
+            <property name="height_request">10</property>
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAccelGroup" id="accelgroup1"/>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="stock">gtk-missing-image</property>
+  </object>
+</interface>

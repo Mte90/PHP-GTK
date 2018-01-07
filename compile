@@ -1,0 +1,5 @@
+cvs -d :pserver:cvsread@cvs.php.net:/repository co -r  php_gtk_2_0_1 -P php-gtk
+cd php-gtk
+./buildconf --with-phpize=/usr/bin/phpize5
+./configure --with-php-config=/usr/bin/php-config5 --enable-php-gtk --with-sourceview --with-extra --with-libsexy --with-mozembed --with-libglade
+

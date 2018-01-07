@@ -1,0 +1,11 @@
+<?php
+$lang[1] = "Il tuo sistema operativo è: "; 
+$lang[2] = "Il tuo nome utente è: "; 
+$lang[3] = "Il tuo sistema è in: "; 
+$lang[4] = "Questo script sta usando: "; 
+$lang[5] = " di ram"; 
+$lang[6] = "La shell è di tipo ";
+$lang[7] = "La lingua del tuo sistema è ";
+$lang[8] = "La versione del tuo php è ";
+
+?>
